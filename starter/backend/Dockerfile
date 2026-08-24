@@ -15,7 +15,8 @@ RUN apk update && \
   && pip install pipenv
 
 RUN mkdir -p /var/www/app && mkdir /app
-
+# Newer GCC in the base image treats incompatible-pointer-types as a hard error; uwsgi's older C source only compiles if it stays a warning.
+ENV CFLAGS="-Wno-error=incompatible-pointer-types"
 COPY Pipfile* /app
 RUN cd /app && pipenv install --system --deploy
 

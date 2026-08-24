@@ -10,7 +10,7 @@ on:
 
 env:
   AWS_REGION: us-east-1
-  ECR_REPOSITORY: mp-backend
+  ECR_REPOSITORY: backend
   CLUSTER_NAME: cluster
 
 defaults:

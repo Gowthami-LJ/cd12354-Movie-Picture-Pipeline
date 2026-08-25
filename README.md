@@ -1,5 +1,7 @@
 # Movie Picture Pipeline
 
+github repo : https://github.com/Gowthami-LJ/cd12354-Movie-Picture-Pipeline
+
 CI/CD pipeline for a two-part Movie Picture catalog application, built with GitHub Actions,
 Docker, Amazon ECR, and Amazon EKS.
 
@@ -100,6 +102,43 @@ http://af24cb7fabac942a4852cac9455369c4-1091898408.us-east-1.elb.amazonaws.com/
 http://a2791ea8c23674e848359faf29707519-1539298759.us-east-1.elb.amazonaws.com/movies
 
 The backend `/movies` endpoint returns the list of movies, and the frontend retrieves the movie data from the deployed backend service.
+
+
+## Successful GitHub Actions Runs
+
+All four required CI/CD workflows have been successfully executed.
+
+### Frontend Continuous Integration
+[Successful Frontend CI Run](https://github.com/Gowthami-LJ/cd12354-Movie-Picture-Pipeline/actions/runs/32820574739)
+
+- Lint: Passed
+- Test: Passed
+- Docker Build: Passed
+
+### Backend Continuous Integration
+[Successful Backend CI Run](https://github.com/Gowthami-LJ/cd12354-Movie-Picture-Pipeline/actions/runs/32820445477)
+
+- Lint: Passed
+- Test: Passed
+- Docker Build: Passed
+
+### Frontend Continuous Deployment
+[Successful Frontend CD Run](https://github.com/Gowthami-LJ/cd12354-Movie-Picture-Pipeline/actions/runs/32817996473)
+
+- Lint: Passed
+- Test: Passed
+- Docker Build: Passed
+- ECR Push: Passed
+- EKS Deployment: Passed
+
+### Backend Continuous Deployment
+[Successful Backend CD Run](https://github.com/Gowthami-LJ/cd12354-Movie-Picture-Pipeline/actions/runs/32820792636)
+
+- Lint: Passed
+- Test: Passed
+- Docker Build: Passed
+- ECR Push: Passed
+- EKS Deployment: Passed
 
 ## Tearing down
 

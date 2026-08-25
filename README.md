@@ -87,6 +87,20 @@ kubectl get svc
 Then visit the `frontend` service's `EXTERNAL-IP` in a browser, and hit
 `http://<backend-EXTERNAL-IP>/movies` directly to confirm the API response.
 
+## Deployed Application URLs
+
+The applications were successfully deployed to Amazon EKS using the GitHub Actions CD pipelines.
+
+### Frontend
+
+http://af24cb7fabac942a4852cac9455369c4-1091898408.us-east-1.elb.amazonaws.com/
+
+### Backend API
+
+http://a2791ea8c23674e848359faf29707519-1539298759.us-east-1.elb.amazonaws.com/movies
+
+The backend `/movies` endpoint returns the list of movies, and the frontend retrieves the movie data from the deployed backend service.
+
 ## Tearing down
 
 To avoid ongoing AWS charges once finished:

@@ -10,7 +10,7 @@ on:
 
 env:
   AWS_REGION: us-east-1
-  ECR_REPOSITORY: mp-frontend
+  ECR_REPOSITORY: frontend
   CLUSTER_NAME: cluster
 
 defaults:
@@ -84,7 +84,7 @@ jobs:
         env:
           ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
           IMAGE_TAG: ${{ steps.set-tag.outputs.tag }}
-          REACT_APP_MOVIE_API_URL: http://localhost:5000
+          REACT_APP_MOVIE_API_URL: ${{ vars.REACT_APP_MOVIE_API_URL }}
         run: |
           docker build \
             --build-arg=REACT_APP_MOVIE_API_URL=${REACT_APP_MOVIE_API_URL} \
